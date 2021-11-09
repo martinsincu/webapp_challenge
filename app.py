@@ -16,10 +16,14 @@ response1 = requests.post(url, data=data1, headers={"Content-Type": "application
 response2 = requests.post(url, data=data2, headers={"Content-Type": "application/json"})
 
 
-
+if st.button('Predict'):
+	st.write('Predictions1:', response1.json())
+	st.write('Predictions2:', response2.json())
+else:
+	st.write('Goodbye')
+	
 st.title("Hello AWS!")
-st.write('Predictions1:', response1.json())
-st.write('Predictions2:', response2.json())
+
 
 
 
