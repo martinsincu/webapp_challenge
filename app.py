@@ -8,20 +8,17 @@ import boto3
 
 import requests
 
-url = 'https://u5r8ezc3el.execute-api.us-east-2.amazonaws.com/mlmodel'
+url = 'https://hrgh3f7u5a.execute-api.us-east-2.amazonaws.com/fraudemodel/'
+data1 = '{  "data": {"columns":["hora","dia","establecimiento_No_definido","ciudad_No_definido","interes_tc_cat_A_<40]","linea_tc_cat_A_<44000]","device_score_1"],"index":[9],"data":[[18,5,0,1,1,0,0]]}   }'
 
-data1 = '{  "data": {"columns":[0,1],"index":[11],"data":[[4.6,1.5]]}   }'
-data2 = '{  "data": {"columns":[0,1],"index":[11],"data":[[1.6,0.6]]}   }'
 response1 = requests.post(url, data=data1, headers={"Content-Type": "application/json"})
-response2 = requests.post(url, data=data2, headers={"Content-Type": "application/json"})
 
 
 if st.button('Predict'):
 	st.write('Predictions1:', response1.json())
-	st.write('Predictions2:', response2.json())
 else:
 	st.write('Goodbye')
-	
+
 st.title("Hello AWS!")
 
 
