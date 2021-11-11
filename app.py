@@ -92,20 +92,25 @@ st.markdown("**API url:**&nbsp;&nbsp;&nbsp"+"`https://hrgh3f7u5a.execute-api.us-
 
 response1 = requests.post(url, data=data, headers={"Content-Type": "application/json"})
 
+if response1==1:
+	label = 'Fraude'
+else:
+	label = 'NoFraude'
+
 if st.button('Predict'):
-	st.write('Predictions1:', response1.json())
+	st.write('Predictions:', response1.json(), " -> ",label)
 
 
 
 
 def main():
-	activities=['EDA','model','summary']
+	activities=['Model','EDA','summary']
 	option=st.sidebar.selectbox('Selection option:',activities)
 
 	
 #DEALING WITH THE EDA PART
 
-	if option=='model':
+	if option=='Model':
 		st.subheader("Model")
 		
 
