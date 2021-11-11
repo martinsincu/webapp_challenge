@@ -12,15 +12,16 @@ from io import BytesIO
 from PIL import Image
 response = requests.get("https://raw.githubusercontent.com/martinsincu/deploy_mlflow_aws/master/images/technologies.PNG")
 img = Image.open(BytesIO(response.content))
-st.image(img,use_column_width=True)
-
 
 st.title("DS Challenge!")
 
 st.subheader('Fraude Solution')
 
 st.write("This is simple Web APP to use REST API from AWS Gateway.")
+st.write("The figure below shows the intereacttion of the API. check the repo: "+'https://github.com/martinsincu/deploy_mlflow_aws')
 
+
+st.image(img,use_column_width=True)
 
 #### Inputs for the Model
 
