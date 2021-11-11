@@ -8,6 +8,13 @@ import boto3
 import requests
 
 
+from io import BytesIO
+from PIL import Image
+response = requests.get("https://raw.githubusercontent.com/martinsincu/deploy_mlflow_aws/master/images/technologies.PNG")
+img = Image.open(BytesIO(response.content))
+st.image(img,use_column_width=True)
+
+
 st.title("DS Challenge!")
 
 st.subheader('Fraude Solution')
