@@ -105,8 +105,9 @@ def main():
 	
 #DEALING WITH THE EDA PART
 
-	if option=='EDA':
-		st.subheader("Exploratory Data Analysis")
+	if option=='model':
+		#st.subheader("Model")
+		
 
 
 #DEALING WITH THE VISUALISATION PART
@@ -116,8 +117,8 @@ def main():
 
 	# DEALING WITH THE MODEL BUILDING PART
 
-	elif option=='model':
-		st.subheader("Model")
+	elif option=='EDA':
+		#st.subheader("Exploratory Data Analysis")
 
 	
 #DELING WITH THE ABOUT US PAGE
