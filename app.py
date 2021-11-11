@@ -91,14 +91,15 @@ data = '{  "data": {"columns":["hora","dia","establecimiento_No_definido","ciuda
 st.markdown("**API url:**&nbsp;&nbsp;&nbsp"+"`https://hrgh3f7u5a.execute-api.us-east-2.amazonaws.com/fraudemodel/`")
 
 response1 = requests.post(url, data=data, headers={"Content-Type": "application/json"})
+output = int(response1.json())
 
-if response1==1:
+if output>=1:
 	label = 'Fraude'
 else:
 	label = 'NoFraude'
 
 if st.button('Predict'):
-	st.write('Predictions:', response1.json(), " -> ",label)
+	st.write('Predictions:', response1.json(), " -> ", label)
 
 
 
