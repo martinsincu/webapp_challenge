@@ -6,7 +6,8 @@ import json
 import boto3
 
 import requests
-
+from scipy.stats import chi2_contingency
+import seaborn as sns
 
 from io import BytesIO
 from PIL import Image
