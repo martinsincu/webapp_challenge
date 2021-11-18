@@ -128,7 +128,7 @@ def main():
 	elif option=='EDA':
 		st.subheader("Exploratory Data Analysis")
 
-			data=st.file_uploader("Upload dataset:",type=['csv','xlsx','txt','json'])
+		data=st.file_uploader("Upload dataset:",type=['csv','xlsx','txt','json'])
 		
 		if data is not None:
 			st.success("Data successfully loaded")
