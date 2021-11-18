@@ -15,21 +15,10 @@ img = Image.open(BytesIO(response.content))
 
 st.title("DS Challenge!")
 
-st.subheader('Fraude Solution')
-
-st.write("This is simple Web APP to use REST API from AWS Gateway.")
-st.write("The figure below shows the intereacttion of the API. check the repo: "+'https://github.com/martinsincu/deploy_mlflow_aws')
-
-
-st.image(img,use_column_width=True)
-
-
-
-
 
 
 def main():
-	activities=['Model','EDA','summary']
+	activities=['Model','EDA'] # summary
 	option=st.sidebar.selectbox('Selection option:',activities)
 
 	
@@ -37,6 +26,12 @@ def main():
 
 	if option=='Model':
 		st.subheader("Model")
+
+		st.subheader('Fraude Solution')
+
+		st.write("This is simple Web APP to use REST API from AWS Gateway.")
+		st.write("The figure below shows the intereacttion of the API. check the repo: "+'https://github.com/martinsincu/deploy_mlflow_aws')
+		st.image(img,use_column_width=True)
 
 		#### Inputs for the Model
 
